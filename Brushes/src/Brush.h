@@ -20,7 +20,6 @@ private:
   void draw_Triangles();
 
   using BrushMap = std::map<int, std::function<void()>>;
-  //using BrushMap = std::map<int, float>;
   BrushMap m_brushMap;
 
   int m_brushType{0};
