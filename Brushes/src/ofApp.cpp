@@ -1,80 +1,72 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::setup() {
+  ofSetBackgroundAuto(false);
+  ofBackground(0);
 
+  ofSetFrameRate(60);
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void ofApp::update() {}
 
+//--------------------------------------------------------------
+void ofApp::draw() {
+
+  if (ofGetMousePressed()) {
+    m_brush.draw();
+  }
+
+  if (ofGetMousePressed(OF_MOUSE_BUTTON_RIGHT)) {
+    ofBackground(0);
+  }
 }
 
 //--------------------------------------------------------------
-void ofApp::draw() { 
-  ofBackground(0); // Clear the screen with a black color
-  ofSetColor(255); // Set the drawing color to white
+void ofApp::keyPressed(int key) {
+  // From section 1.ii.f, allowing you to save a screenshot by pressing the 's'
+  // key:
+  if (key == 's') {
+    // HACK: only needed on windows, when using ofSetAutoBackground(false)
+    glReadBuffer(GL_FRONT);
 
-  // Draw some shapes
-  ofDrawRectangle(50, 50, 100,
-                  100); // Top left corner at (50, 50), 100 wide x 100 high
-  ofDrawCircle(250, 100, 50);       // Centered at (250, 100), radius of 50
-  ofDrawEllipse(400, 100, 80, 100); // Centered at (400 100), 80 wide x 100 high
-  ofDrawTriangle(500, 150, 550, 50, 600, 150); // Three corners: (500, 150), (550, 50), (600, 150)
-  ofDrawLine(700, 50, 700, 150); // Line from (700, 50) to (700, 150)
+    // We use the timestamp here so that you can save multiple images without
+    // overriding previous screenshots (i.e. each file has a unique name)
+    ofSaveScreen("savedScreenshot_" + ofGetTimestampString() + ".png");
+  } else if (key == '1') {
+    m_brush.prevBrush();
+  } else if (key == '2') {
+    m_brush.nextBrush();
+  }
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
+void ofApp::keyReleased(int key) {}
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
+void ofApp::mouseMoved(int x, int y) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
+void ofApp::mouseDragged(int x, int y, int button) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
+void ofApp::mousePressed(int x, int y, int button) {}
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
+void ofApp::mouseReleased(int x, int y, int button) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
+void ofApp::mouseEntered(int x, int y) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
+void ofApp::mouseExited(int x, int y) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
+void ofApp::windowResized(int w, int h) {}
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
+void ofApp::gotMessage(ofMessage msg) {}
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
-}
+void ofApp::dragEvent(ofDragInfo dragInfo) {}
