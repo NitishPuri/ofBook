@@ -25,4 +25,12 @@ private:
     ofPolyline m_straightSegmentPolyline;
     ofPolyline m_curvedSegmentPolyline;
     ofPolyline m_closedShapePolyline;
+
+    ofPolyline m_currentPolyline;
+    bool m_leftMouseButtonPressed{ false };
+    ofVec2f m_lastPoint;
+    float m_minDistance{ 10.F };
+    vector<ofPolyline> m_polylines;
+    int m_drawMode{ 0 };
+
 };
