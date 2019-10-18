@@ -1,13 +1,13 @@
 #include "Ball.h"
 
-void Ball::setup() {
-    x = ofRandom(0, ofGetWidth());
-    y = ofRandom(0, ofGetHeight());
+void Ball::setup(float _x, float _y) {
+    x = _x;
+    y = _y;
 
     speedX = ofRandom(-1, 1);
     speedY = ofRandom(-1, 1);
 
-    dim = 20;
+    dim = ofRandom(10, 40);
 
     color.set(ofRandom(255), ofRandom(255), ofRandom(255));
 }

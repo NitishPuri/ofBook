@@ -5,7 +5,7 @@
 class Ball
 {
 public:
-    void setup();
+    void setup(float _x, float _y);
     void update();
     void draw();
 

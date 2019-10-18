@@ -7,9 +7,9 @@
 class ofApp : public ofBaseApp {
 
 public:
-    void setup();
-    void update();
-    void draw();
+    void setup() override;
+    void update() override;
+    void draw() override;
 
     void keyPressed(int key);
     void keyReleased(int key);
@@ -23,6 +23,6 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    array<Ball, 50> m_balls;
+    vector<Ball> m_balls;
 };
 
