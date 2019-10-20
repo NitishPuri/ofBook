@@ -3,6 +3,7 @@
 #include "ofMain.h"
 
 #include "Particle.h"
+#include "Spring.h"
 
 class ofApp : public ofBaseApp {
 
@@ -24,6 +25,11 @@ public:
     void gotMessage(ofMessage msg);
 
     vector<Particle> m_particles;
+    vector<Spring> m_springs;
+    vector<ofPoint> trail;
 
+    //bool m_repel;
+    //int m_radius;
+    //float m_strength;
 };
 
