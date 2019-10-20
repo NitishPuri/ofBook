@@ -188,6 +188,7 @@
     <ClCompile Include="src\Enemy.cpp" />
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\Life.cpp" />
+    <ClCompile Include="src\LiveTesting.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscBundle.cpp" />
@@ -209,6 +210,7 @@
     <ClInclude Include="src\Enemy.h" />
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\Life.h" />
+    <ClInclude Include="src\LiveTesting.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOsc.h" />
     <ClInclude Include="..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscArg.h" />

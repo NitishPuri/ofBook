@@ -58,6 +58,9 @@
     <ClCompile Include="src\Player.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\LiveTesting.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -168,6 +171,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Player.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LiveTesting.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

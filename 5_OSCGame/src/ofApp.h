@@ -8,6 +8,8 @@
 #include "Life.h"
 #include "LevelController.h"
 
+#include "LiveTesting.h"
+
 class ofApp : public ofBaseApp {
 
 public:
@@ -27,15 +29,17 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    void update_bullets();
-
 private:
     enum class GameState { START, GAME, END };
     GameState m_gameState;
-    int m_Score;
+    int score;
+
     Player player_1;
+    LevelController level_controller;
+
     vector<Bullet> bullets;
     vector<Enemy> enemies;
+    vector<Life> bonuses;
 
     float max_enemy_amplitude;
     float max_enemy_shoot_interval;
@@ -43,7 +47,21 @@ private:
     ofImage player_image;
     ofImage enemy_image;
     ofImage enemy_bullet_image;
-    ofImage player_bullet_image;
+    ofImage player_bullet_image;    
+    ofImage start_screen;
+    ofImage end_screen;
+    ofImage life_image;
+
+    //LiveTesting liveTest;
+
+    void update_bullets();
+    void update_bonuses();
+    void check_bullet_collisions();
+    void draw_lives();
+    void draw_score();
+
+    ofTrueTypeFont score_font;
+    bool testing;
 
 };
 

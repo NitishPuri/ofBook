@@ -2,6 +2,7 @@
 
 void Player::setup(ofImage * _img)
 {
+    lives = 3;
     speed = 5;
     img = _img;
     width = height = img->getWidth();
